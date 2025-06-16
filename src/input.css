@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .neon-glow {
+        text-shadow: 0 0 5px #60F3A5, 0 0 10px #60F3A5, 0 0 20px #58C3FF, 0 0 30px #58C3FF;
+    }
+
+    @keyframes glowSweep {
+        0% {
+            text-shadow: 0 0 5px #60F3A5, 0 0 10px #60F3A5;
+        }
+
+        50% {
+            text-shadow: 0 0 10px #58C3FF, 0 0 20px #58C3FF, 0 0 30px #FFFFFF;
+        }
+
+        100% {
+            text-shadow: 0 0 5px #60F3A5, 0 0 10px #60F3A5;
+        }
+    }
+
+    .animate-glow-sweep {
+        animation: glowSweep 3s ease-in-out infinite;
+    }
+}
