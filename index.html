@@ -19,7 +19,8 @@
 
 <body class="bg-[#0A0F2C] text-white font-sans tracking-wide">
     <!-- Logo + Intro -->
-    <section id="Inicio" class="w-full min-h-screen flex flex-col items-center justify-center text-center bg-[#0A0F2C] relative px-4">
+    <section id="Inicio"
+        class="w-full min-h-screen flex flex-col items-center justify-center text-center bg-[#0A0F2C] relative px-4">
         <div class="relative w-56 h-56 md:w-72 md:h-72 mb-8 animate-[pulse_4s_ease-in-out_infinite]">
             <!-- Glow Effect Behind -->
             <div
@@ -50,7 +51,7 @@
             <!-- Desktop Nav -->
             <nav class="space-x-6 hidden md:flex">
                 <a href="#Inicio" class="text-white hover:text-[#58C3FF] transition">Inicio</a>
-                <a href="#About" class="text-white hover:text-[#58C3FF] transition">Sobre Nosotros</a>
+                <a href="#Presencia" class="text-white hover:text-[#58C3FF] transition">Presencia Digital</a>
                 <a href="#Servicios" class="text-white hover:text-[#58C3FF] transition">Servicios</a>
                 <a href="#Proyectos" class="text-white hover:text-[#58C3FF] transition">Proyectos</a>
                 <a href="#contacto" class="text-white hover:text-[#58C3FF] transition">Contacto</a>
@@ -69,7 +70,7 @@
         <div id="mobile-menu"
             class="md:hidden hidden flex flex-col items-center bg-[#0A0F2C] border-t border-[#60F3A5]/10 text-white py-6 space-y-6 animate-fade-in-down">
             <a href="#Inicio" class="text-lg hover:text-[#58C3FF] transition">Inicio</a>
-            <a href="#About" class="text-white hover:text-[#58C3FF] transition">Sobre Nosotros</a>
+            <a href="#Presencia" class="text-white hover:text-[#58C3FF] transition">Presencia Digital</a>
             <a href="#Servicios" class="text-lg hover:text-[#58C3FF] transition">Servicios</a>
             <a href="#Proyectos" class="text-lg hover:text-[#58C3FF] transition">Proyectos</a>
             <a href="#contacto" class="text-lg hover:text-[#58C3FF] transition">Contacto</a>
@@ -79,27 +80,39 @@
 
     <!-- Hero Section -->
     <main class="pt-28">
-        <section id="About" class="min-h-screen flex items-center justify-center text-center px-6">
-            <div class="space-y-6">
-                <h2
-                    class="text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#60F3A5] via-[#58C3FF] to-white animate-pulse">
-                    El futuro se diseña hoy.
-                </h2>
-                <p class="text-lg md:text-xl text-[#F5F5F5] max-w-2xl mx-auto">
-                    Estrategias digitales, diseño de interfaces, automatizaciones y soluciones que conectan.
-                </p>
-                <div class="space-x-4">
-                    <a href="#contacto"
-                        class="px-6 py-3 bg-[#60F3A5] hover:bg-[#58C3FF] text-black font-semibold rounded-xl shadow-xl transition">
-                        Descubrir más
-                    </a>
-                    <a href="#contacto"
-                        class="px-6 py-3 border border-[#60F3A5] text-[#60F3A5] rounded-xl hover:bg-[#60F3A5]/20 transition">
-                        Contacto
-                    </a>
+        <section id="Presencia" class="min-h-screen flex items-center justify-center px-6 py-16">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-12 max-w-7xl mx-auto">
+
+                <!-- Imagen a la izquierda (más grande y responsive) -->
+                <img src="/assets/img/responsive.png" alt="Sitio BLINT en diferentes dispositivos"
+                    class="w-full max-w-[500px] md:max-w-[600px] lg:max-w-[700px] drop-shadow-2xl transition-transform duration-500 hover:scale-105"
+                    loading="lazy">
+
+                <!-- Contenido a la derecha -->
+                <div class="space-y-6 text-center md:text-left max-w-xl">
+                    <h2
+                        class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#60F3A5] via-[#58C3FF] to-white animate-pulse leading-tight">
+                        Una experiencia visual, donde sea que estés
+                    </h2>
+                    <p class="text-base md:text-lg text-[#F5F5F5]">
+                        Desde notebooks hasta smartphones, nuestra plataforma se adapta para ofrecer soluciones visuales
+                        que conectan con tu audiencia sin importar el dispositivo.
+                    </p>
+                    <div class="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-6">
+                        <a href="#contacto"
+                            class="px-6 py-3 bg-[#60F3A5] hover:bg-[#58C3FF] text-black font-semibold rounded-xl shadow-xl transition">
+                            Descubrir más
+                        </a>
+                        <a href="#contacto"
+                            class="px-6 py-3 border border-[#60F3A5] text-[#60F3A5] rounded-xl hover:bg-[#60F3A5]/20 transition">
+                            Contacto
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
+
+
 
         <!-- Features -->
         <section id="Servicios" class="relative py-36 bg-gradient-to-t from-[#0A0F2C] to-black overflow-hidden">
@@ -191,7 +204,8 @@
             </div>
 
             <!-- Projects Section -->
-            <section id="Proyectos" class="min-h-screen pt-40 pb-32 text-center flex items-center bg-[#060B1C] relative z-10">
+            <section id="Proyectos"
+                class="min-h-screen pt-40 pb-32 text-center flex items-center bg-[#060B1C] relative z-10">
                 <div class="max-w-7xl mx-auto px-6">
                     <h2
                         class="text-5xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-[#60F3A5] to-[#58C3FF] mb-20 tracking-wider">
@@ -202,32 +216,45 @@
             </section>
 
 
-            <!-- Contact Form -->
-            <section id="contacto" class="min-h-screen pt-40 pb-32 text-center flex items-center bg-[#0A0F2C]"> 
-                <div class="max-w-xl mx-auto px-6 text-center">
-                    <h2
-                        class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#60F3A5] to-[#58C3FF] mb-6">
-                        Hablemos
-                    </h2>
+            <section id="contacto" class="min-h-screen pt-40 pb-32 bg-[#0A0F2C] flex items-center justify-center">
+                <div class="max-w-6xl w-full px-6">
+                    <div class="flex flex-col md:flex-row items-stretch justify-between gap-8">
+                        <!-- Formulario -->
+                        <div class="w-full md:w-1/2 flex flex-col justify-center">
+                            <h2
+                                class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#60F3A5] to-[#58C3FF] mb-6 text-center">
+                                Hablemos
+                            </h2>
 
-                    <!-- Formulario sin action ni method -->
-                    <form id="contact-form" class="space-y-6">
-                        <input type="text" name="name" placeholder="Tu nombre" required
-                            class="w-full px-4 py-3 bg-black text-white border border-gray-700 rounded-xl focus:outline-none focus:border-[#60F3A5]" />
+                            <form id="contact-form" class="space-y-6">
+                                <input type="text" name="name" placeholder="Tu nombre" required
+                                    class="w-full px-4 py-3 bg-black text-white border border-gray-700 rounded-xl focus:outline-none focus:border-[#60F3A5]" />
 
-                        <input type="email" name="email" placeholder="Tu correo" required
-                            class="w-full px-4 py-3 bg-black text-white border border-gray-700 rounded-xl focus:outline-none focus:border-[#60F3A5]" />
+                                <input type="email" name="email" placeholder="Tu correo" required
+                                    class="w-full px-4 py-3 bg-black text-white border border-gray-700 rounded-xl focus:outline-none focus:border-[#60F3A5]" />
 
-                        <textarea name="message" placeholder="mensaje" required
-                            class="w-full px-4 py-3 bg-black text-white border border-gray-700 rounded-xl h-32 focus:outline-none focus:border-[#60F3A5]"></textarea>
+                                <textarea name="message" placeholder="mensaje" required
+                                    class="w-full px-4 py-3 bg-black text-white border border-gray-700 rounded-xl h-32 focus:outline-none focus:border-[#60F3A5]"></textarea>
 
-                        <button type="submit"
-                            class="w-full px-6 py-3 bg-[#60F3A5] text-black font-semibold rounded-xl hover:bg-[#58C3FF] transition">
-                            Enviar mensaje
-                        </button>
-                    </form>
+                                <button type="submit"
+                                    class="w-full px-6 py-3 bg-[#60F3A5] text-black font-semibold rounded-xl hover:bg-[#58C3FF] transition">
+                                    Enviar mensaje
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- Imagen responsive -->
+                        <div class="w-full md:w-1/2 flex justify-center items-center">
+                            <div class="flex justify-center">
+                                <img src="/assets/img/celu.png" alt="Contacto Blint"
+                                    class="w-[500px] h-auto object-contain" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
+
+
     </main>
 
     <footer class="bg-black text-[#F5F5F5]">
@@ -276,8 +303,8 @@
                         target="_blank" rel="noopener noreferrer">
                         <i class="fa-brands fa-github"></i>
                     </a>
-                    <a href="https://www.facebook.com/profile.php?id=61577510464882" class="text-gray-400 hover:text-[#60F3A5] transition" target="_blank"
-                        rel="noopener noreferrer">
+                    <a href="https://www.facebook.com/profile.php?id=61577510464882"
+                        class="text-gray-400 hover:text-[#60F3A5] transition" target="_blank" rel="noopener noreferrer">
                         <i class="fa-brands fa-facebook"></i>
                     </a>
                 </div>
