@@ -8,12 +8,18 @@
     <title>Blint</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init('JGmarZaGSpP6a9fvj'); // Tu clave pública
+        })();
+    </script>
+
 </head>
 
 <body class="bg-[#0A0F2C] text-white font-sans tracking-wide">
     <!-- Logo + Intro -->
-    <section
-        class="w-full min-h-screen flex flex-col items-center justify-center text-center bg-[#0A0F2C] relative px-4">
+    <section id="Inicio" class="w-full min-h-screen flex flex-col items-center justify-center text-center bg-[#0A0F2C] relative px-4">
         <div class="relative w-56 h-56 md:w-72 md:h-72 mb-8 animate-[pulse_4s_ease-in-out_infinite]">
             <!-- Glow Effect Behind -->
             <div
@@ -44,6 +50,7 @@
             <!-- Desktop Nav -->
             <nav class="space-x-6 hidden md:flex">
                 <a href="#Inicio" class="text-white hover:text-[#58C3FF] transition">Inicio</a>
+                <a href="#About" class="text-white hover:text-[#58C3FF] transition">Sobre Nosotros</a>
                 <a href="#Servicios" class="text-white hover:text-[#58C3FF] transition">Servicios</a>
                 <a href="#Proyectos" class="text-white hover:text-[#58C3FF] transition">Proyectos</a>
                 <a href="#contacto" class="text-white hover:text-[#58C3FF] transition">Contacto</a>
@@ -62,6 +69,7 @@
         <div id="mobile-menu"
             class="md:hidden hidden flex flex-col items-center bg-[#0A0F2C] border-t border-[#60F3A5]/10 text-white py-6 space-y-6 animate-fade-in-down">
             <a href="#Inicio" class="text-lg hover:text-[#58C3FF] transition">Inicio</a>
+            <a href="#About" class="text-white hover:text-[#58C3FF] transition">Sobre Nosotros</a>
             <a href="#Servicios" class="text-lg hover:text-[#58C3FF] transition">Servicios</a>
             <a href="#Proyectos" class="text-lg hover:text-[#58C3FF] transition">Proyectos</a>
             <a href="#contacto" class="text-lg hover:text-[#58C3FF] transition">Contacto</a>
@@ -71,7 +79,7 @@
 
     <!-- Hero Section -->
     <main class="pt-28">
-        <section id="Inicio" class="min-h-screen flex items-center justify-center text-center px-6">
+        <section id="About" class="min-h-screen flex items-center justify-center text-center px-6">
             <div class="space-y-6">
                 <h2
                     class="text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#60F3A5] via-[#58C3FF] to-white animate-pulse">
@@ -183,7 +191,7 @@
             </div>
 
             <!-- Projects Section -->
-            <section id="Proyectos" class="py-24 bg-[#060B1C] relative z-10">
+            <section id="Proyectos" class="min-h-screen pt-40 pb-32 text-center flex items-center bg-[#060B1C] relative z-10">
                 <div class="max-w-7xl mx-auto px-6">
                     <h2
                         class="text-5xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-[#60F3A5] to-[#58C3FF] mb-20 tracking-wider">
@@ -195,19 +203,24 @@
 
 
             <!-- Contact Form -->
-            <section id="contacto" class="py-20 bg-[#0A0F2C]">
+            <section id="contacto" class="min-h-screen pt-40 pb-32 text-center flex items-center bg-[#0A0F2C]"> 
                 <div class="max-w-xl mx-auto px-6 text-center">
                     <h2
                         class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#60F3A5] to-[#58C3FF] mb-6">
                         Hablemos
                     </h2>
-                    <form class="space-y-6" action="/send.php" method="POST">
-                        <input type="text" name="nombre" placeholder="Tu nombre" required
+
+                    <!-- Formulario sin action ni method -->
+                    <form id="contact-form" class="space-y-6">
+                        <input type="text" name="name" placeholder="Tu nombre" required
                             class="w-full px-4 py-3 bg-black text-white border border-gray-700 rounded-xl focus:outline-none focus:border-[#60F3A5]" />
+
                         <input type="email" name="email" placeholder="Tu correo" required
                             class="w-full px-4 py-3 bg-black text-white border border-gray-700 rounded-xl focus:outline-none focus:border-[#60F3A5]" />
-                        <textarea name="mensaje" placeholder="Tu mensaje" required
+
+                        <textarea name="message" placeholder="mensaje" required
                             class="w-full px-4 py-3 bg-black text-white border border-gray-700 rounded-xl h-32 focus:outline-none focus:border-[#60F3A5]"></textarea>
+
                         <button type="submit"
                             class="w-full px-6 py-3 bg-[#60F3A5] text-black font-semibold rounded-xl hover:bg-[#58C3FF] transition">
                             Enviar mensaje
@@ -237,11 +250,12 @@
                 <ul class="space-y-2 text-sm">
                     <li class="flex items-center space-x-3">
                         <i class="fa-solid fa-envelope text-[#60F3A5]"></i>
-                        <a href="mailto:contacto@autoproyecto.xyz" class="hover:text-[#60F3A5] transition">contacto@autoproyecto.xyz</a>
+                        <a href="mailto:contacto@autoproyecto.xyz"
+                            class="hover:text-[#60F3A5] transition">blint0577@gmail.com</a>
                     </li>
                     <li class="flex items-center space-x-3">
                         <i class="fa-solid fa-phone text-[#60F3A5]"></i>
-                        <span>+54 9 351 000 0000</span>
+                        <span>+54 9 351 251-0803</span>
                     </li>
                     <li class="flex items-center space-x-3">
                         <i class="fa-solid fa-location-dot text-[#60F3A5]"></i>
@@ -262,9 +276,9 @@
                         target="_blank" rel="noopener noreferrer">
                         <i class="fa-brands fa-github"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-[#60F3A5] transition" target="_blank"
+                    <a href="https://www.facebook.com/profile.php?id=61577510464882" class="text-gray-400 hover:text-[#60F3A5] transition" target="_blank"
                         rel="noopener noreferrer">
-                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-facebook"></i>
                     </a>
                 </div>
             </div>
@@ -275,9 +289,6 @@
             &copy; 2025 Blint. Todos los derechos reservados.
         </div>
     </footer>
-
-
-
     <script>
         const toggle = document.getElementById("menu-toggle");
         const menu = document.getElementById("mobile-menu");
@@ -285,8 +296,35 @@
         toggle.addEventListener("click", () => {
             menu.classList.toggle("hidden");
         });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.querySelector('#contact-form');
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const button = form.querySelector('button');
+                button.disabled = true;
+                button.innerText = 'Enviando...';
+
+                emailjs.sendForm('service_9x5zjpk', 'template_s54n00k', form)
+                    .then(() => {
+                        alert('✅ Mensaje enviado correctamente.');
+                        form.reset();
+                    })
+                    .catch((error) => {
+                        console.error('❌ Error al enviar:', error);
+                        alert('⚠️ Hubo un problema al enviar el mensaje. Intenta nuevamente.');
+                    })
+                    .finally(() => {
+                        button.disabled = false;
+                        button.innerText = 'Enviar mensaje';
+                    });
+            });
+        });
     </script>
     <script src="/js/poryectos.js"></script>
+
 
 </body>
 
